@@ -1,0 +1,20 @@
+{
+  "name": "tpc-chat-utn",
+  "version": "0.0.1",
+  "description": "Chat construido mediante el protocolo TCP en red local",
+  "main": "server.ts",
+  "scripts": {
+    "server": "ts-node server.ts",
+    "client":"ts-node client.ts"
+  },
+  "keywords": [
+    "TCP",
+    "server",
+    "client"
+  ],
+  "author": "Sebastian Galeano",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.8.9"
+  }
+}
