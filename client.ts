@@ -9,10 +9,20 @@ const clientTCP = net.connect(OPTIONS);
 
 clientTCP.on("connect", () =>{
     console.log("Conection succesful");
+
     const args = process.argv.splice(2);
     const request = JSON.stringify(args);
 
     clientTCP.write(request);
-    setTimeout(() => {
-        clientTCP.end();}, 5000);
+
+  //  clientTCP.write(request);
+  //setTimeout(() => {
+  //      clientTCP.end();}, 5000);
+});
+
+clientTCP.on("data",(data) =>{
+    const stringResponse = data.toString();
+    const response = JSON.parse(stringResponse);
+    console.log(response);
+    clientTCP.end();
 });
