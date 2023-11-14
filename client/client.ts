@@ -1,10 +1,10 @@
 import net from "node:net";
+import dotenv from "dotenv";
+dotenv.config();
+const port = process.env.PORT ? parseInt(process.env.PORT, 10) : 8080;
+const host = process.env.HOST || "127.0.0.1";
 
-const OPTIONS = {
-    port: 2010,
-    host: "127.0.0.1",
-}
-
+const OPTIONS = { port, host };
 const clientTCP = net.connect(OPTIONS);
 
 clientTCP.on("connect", () =>{

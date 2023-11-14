@@ -4,8 +4,8 @@
   "description": "Chat construido mediante el protocolo TCP en red local",
   "main": "server.ts",
   "scripts": {
-    "server": "ts-node server.ts",
-    "client":"ts-node client.ts"
+    "server": "nodemon server.ts",
+    "client": "ts-node client.ts"
   },
   "keywords": [
     "TCP",
@@ -15,6 +15,10 @@
   "author": "Sebastian Galeano",
   "license": "ISC",
   "devDependencies": {
-    "@types/node": "^20.8.9"
+    "@types/node": "^20.8.9",
+    "nodemon": "^3.0.1"
+  },
+  "dependencies": {
+    "dotenv": "^16.3.1"
   }
 }

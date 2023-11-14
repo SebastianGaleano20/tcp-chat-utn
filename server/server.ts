@@ -1,6 +1,8 @@
 import net from "node:net";
+import dotenv from "dotenv";
+dotenv.config();
 
-const PORT = 2010;
+const PORT = process.env.PORT;
 const serverTCP = net.createServer();
 
 serverTCP.on("connection", (socket) => {
